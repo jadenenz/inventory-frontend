@@ -1,9 +1,4 @@
-import { useState, useEffect } from "react"
-//IMPORT STYLE MODULE AND THEN MAKE MATCHA DETAIL PAGE NEXT
-
 export default function Create({ producers, grades }) {
-  //FINISH THIS FUNCTION https://nextjs.org/docs/guides/building-forms
-
   const handleSubmit = async (event) => {
     event.preventDefault()
 
@@ -18,7 +13,6 @@ export default function Create({ producers, grades }) {
 
     // Send the data to the server in JSON format
     const JSONdata = JSON.stringify(data)
-    console.log(JSONdata)
 
     // API endpoint where we send form data
     const endpoint = "http://localhost:3001/matcha/create"
@@ -39,7 +33,7 @@ export default function Create({ producers, grades }) {
       // Send the form data to our forms API and get a response
       const response = await fetch(endpoint, options)
 
-      // // Get the response data from server as JSON.
+      // Get the response data from server as JSON.
       const result = await response.json()
       alert(`The server sent back: ${result.data}`)
     } catch (err) {

@@ -11,7 +11,7 @@ export default function MatchaDetail({ matchaData }) {
         producer={matchaData.producer}
         stock={matchaData.stock}
         price={matchaData.price}
-        grade={matchaData.grade}
+        grade={matchaData.grade.name}
         description={matchaData.description}
       />
       <Link href="/matcha/">Back to all matcha</Link>
